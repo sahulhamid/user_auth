@@ -1,0 +1,15 @@
+{% extends "user/base.html"%}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+   
+    <p>username</p>
+    {{form.username.errors}}
+    {{form.username}}
+    {{request.user}}
+    <p>password</p>
+    {{form.password.errors}}
+    {{form.password}}
+    <button>Submit</button>
+</form>
+{% endblock content %}
